@@ -4,20 +4,24 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table (name = "alumnos")
+@Table (name = "habitacion")
 @Data
 @NoArgsConstructor
 public class Habitacion {
     @Id
-    @Column(name = "id")
+    @Column(name = "habitacion_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long habitacion_id;
     @Column(name ="nombre")
     private String nombre;
     @Column(name = "costo")
     private Double costo;
     @Column(name = "descripción")
     private String descripcion;
+    @Column(name = "personas")
+    private int personas;
+    @Column(name = "foto1")
+    private String photo;
 
 
 }

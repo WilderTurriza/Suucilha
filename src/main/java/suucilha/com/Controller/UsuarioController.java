@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import suucilha.com.DTO.UsuarioDTO;
 import suucilha.com.Entity.Usuario;
 import suucilha.com.Service.UsuarioService;
 
@@ -37,8 +38,18 @@ public class UsuarioController {
 	
 	@PostMapping("/")
 	@ResponseBody
-	public Usuario createUsuario(@RequestBody Usuario Usuario){
-		return UsuarioService.createUsuario(Usuario);
+	public ResponseEntity<?> registrarUsuario(@RequestBody Usuario Usuario){
+		try {
+	        Usuario usuario = UsuarioService.registrarUsuario(Usuario);
+	        
+	        if (usuario != null) {
+	            return ResponseEntity.ok().body(usuario);
+	        } else {
+	            return ResponseEntity.status(HttpStatus.CONFLICT).body(null);
+	        }
+	    } catch (Exception e) {
+	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+	    }
 	}
 	
 	@PutMapping("/")
@@ -53,5 +64,20 @@ public class UsuarioController {
 		UsuarioService.deleteUsuario(id);
 	}
 	
+	@GetMapping("/session")
+	@ResponseBody
+	public ResponseEntity<?> iniciarSesion(@RequestBody Usuario Usuario) {
+	    try {
+	        UsuarioDTO usuario = UsuarioService.getUsuario(Usuario.getEmail(), Usuario.getContrasena());
+	        
+	        if (usuario != null) {
+	            return ResponseEntity.ok().body(usuario);
+	        } else {
+	            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario no encontrado");
+	        }
+	    } catch (Exception e) {
+	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error en el servidor");
+	    }
+	}
 
 }

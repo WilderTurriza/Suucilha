@@ -17,8 +17,8 @@ public class UsuarioService {
 	private UsuarioRepository UsuarioRepository;
 	
 	public Usuario registrarUsuario(Usuario Usuario) {
-		System.out.println("Verificando si el usuario existe para el correo electrónico: " + Usuario.getEmail());
-		boolean usuarioExiste = UsuarioRepository.existsByEmail(Usuario.getEmail());
+		System.out.println("Verificando si el usuario existe para el correo electrónico: " + Usuario.getUsername());
+		boolean usuarioExiste = UsuarioRepository.existsByUsername(Usuario.getUsername());
 		System.out.println("Usuario existe: " + usuarioExiste);
 
 		if (usuarioExiste) {
@@ -47,7 +47,7 @@ public class UsuarioService {
 		userSesion.setId(user.getId());
 		userSesion.setNombre(user.getNombre());
 		userSesion.setApellido(user.getApellido());
-		userSesion.setEmail(user.getEmail());
+		userSesion.setUsername(user.getUsername());
 		
 		return userSesion;
 	}

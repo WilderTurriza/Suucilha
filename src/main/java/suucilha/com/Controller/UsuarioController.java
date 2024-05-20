@@ -14,12 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.RequiredArgsConstructor;
 import suucilha.com.DTO.UsuarioDTO;
 import suucilha.com.Entity.Usuario;
 import suucilha.com.Service.UsuarioService;
 
 @RestController
 @RequestMapping(value="/usuario")
+@RequiredArgsConstructor
 public class UsuarioController {
 
 	@Autowired
@@ -68,7 +70,7 @@ public class UsuarioController {
 	@ResponseBody
 	public ResponseEntity<?> iniciarSesion(@RequestBody Usuario Usuario) {
 	    try {
-	        UsuarioDTO usuario = UsuarioService.getUsuario(Usuario.getEmail(), Usuario.getContrasena());
+	        UsuarioDTO usuario = UsuarioService.getUsuario(Usuario.getUsername(), Usuario.getPassword());
 	        
 	        if (usuario != null) {
 	            return ResponseEntity.ok().body(usuario);

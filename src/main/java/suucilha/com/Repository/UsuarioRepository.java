@@ -17,7 +17,12 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 	
 	Usuario findByNombre(String nombre);
 	
-	Optional<Usuario> findByUsername(String username); 
+	Optional<Usuario> findByUsername(String username);
+
+	@Query("SELECT u FROM Usuario u WHERE u.username = :username")
+	Usuario findByUsername2(String username); 
+	
+	
 
 
 

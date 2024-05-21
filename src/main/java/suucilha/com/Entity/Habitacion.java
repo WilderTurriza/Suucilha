@@ -20,8 +20,6 @@ public class Habitacion {
     private String descripcion;
     @Column(name = "personas")
     private int personas;
-    @Column(name = "foto1")
-    private String photo;
 
 
 }

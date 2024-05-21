@@ -26,4 +26,16 @@ public class AuthController {
     {
         return ResponseEntity.ok(authService.register(request));
     }
+    
+    @PostMapping(value = "forgot-password")
+    public ResponseEntity<String> recuperar(@RequestBody String username)
+    {
+        return ResponseEntity.ok(authService.recuperarPassword(username.trim()));
+    }
+    
+    @PostMapping(value = "validarCodigo")
+    public ResponseEntity<AuthResponse> change(@RequestBody String codigo)
+    {
+        return ResponseEntity.ok(authService.validarCode(codigo.trim()));
+    }
 }

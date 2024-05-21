@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
+import suucilha.com.Auth.LoginRequest;
 import suucilha.com.DTO.UsuarioDTO;
 import suucilha.com.Entity.Usuario;
 import suucilha.com.Service.UsuarioService;
@@ -27,6 +28,7 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioService UsuarioService;
 	
+	
 
 	@GetMapping("/")
 	@ResponseBody
@@ -38,21 +40,16 @@ public class UsuarioController {
 		}
 	}
 	
-	@PostMapping("/")
+	@PostMapping("sesion")
 	@ResponseBody
-	public ResponseEntity<?> registrarUsuario(@RequestBody Usuario Usuario){
+	public ResponseEntity<?> getUsuario(@RequestBody String username){
 		try {
-	        Usuario usuario = UsuarioService.registrarUsuario(Usuario);
-	        
-	        if (usuario != null) {
-	            return ResponseEntity.ok().body(usuario);
-	        } else {
-	            return ResponseEntity.status(HttpStatus.CONFLICT).body(null);
-	        }
-	    } catch (Exception e) {
-	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-	    }
+			return ResponseEntity.ok().body(UsuarioService.getUsuario(username));
+		}catch(Exception e) {
+			return new ResponseEntity<>("datos no encontrados", HttpStatus.OK);
+		}
 	}
+	
 	
 	@PutMapping("/")
 	@ResponseBody
@@ -60,26 +57,17 @@ public class UsuarioController {
 		return UsuarioService.updateUsuario(Usuario);
 	}
 	
+	@PutMapping("changePassword")
+	@ResponseBody
+	public Usuario updatePassword(@RequestBody LoginRequest request){
+		
+		return UsuarioService.updatePassword(request);
+	}
+	
 	@DeleteMapping("/{id}")
 	@ResponseBody
 	public void deleteUsuario(@PathVariable (value = "id") Long id){
 		UsuarioService.deleteUsuario(id);
-	}
-	
-	@GetMapping("/session")
-	@ResponseBody
-	public ResponseEntity<?> iniciarSesion(@RequestBody Usuario Usuario) {
-	    try {
-	        UsuarioDTO usuario = UsuarioService.getUsuario(Usuario.getUsername(), Usuario.getPassword());
-	        
-	        if (usuario != null) {
-	            return ResponseEntity.ok().body(usuario);
-	        } else {
-	            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario no encontrado");
-	        }
-	    } catch (Exception e) {
-	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error en el servidor");
-	    }
 	}
 
 }

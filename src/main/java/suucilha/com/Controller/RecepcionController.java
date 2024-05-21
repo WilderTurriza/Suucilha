@@ -1,5 +1,7 @@
 package suucilha.com.Controller;
 
+import java.sql.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import suucilha.com.Entity.FechasRequest;
 import suucilha.com.Entity.Recepcion;
 import suucilha.com.Service.RecepcionService;
 
@@ -35,6 +38,16 @@ public class RecepcionController {
 		}
 	}
 	
+	@PostMapping("disponibles")
+	@ResponseBody
+	public ResponseEntity<?> getAllHabitaciones(@RequestBody FechasRequest fechaRequest){
+		try {
+			return ResponseEntity.ok().body(RecepcionService.getAllHabitaciones(fechaRequest.getFechaEntrada(),fechaRequest.getFechaSalida()));
+		}catch(Exception e) {
+			return new ResponseEntity<>("datos no encontrados", HttpStatus.OK);
+		}
+	}
+
 	@PostMapping("/")
 	@ResponseBody
 	public Recepcion createRecepcion(@RequestBody Recepcion Recepcion){

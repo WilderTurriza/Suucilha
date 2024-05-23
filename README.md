@@ -1,4 +1,4 @@
-# Suucilha
+# Suucilha Hotel
 
 ## Colaboradores
 - Wilberth Jesús Kantún Lizama

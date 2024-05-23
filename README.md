@@ -29,7 +29,7 @@ Por otro lado, el sistema contará con una sección de administración donde el 
 - 🛠️ Gestionar las habitaciones (crear, modificar y eliminar).
 - 📸 Subir de 1 a 4 imágenes en formato .png para cada habitación.
 
-## Enlaces
+## 🔗 Enlaces
 - 📄[Requisitos y priorización](https://github.com/WilberthKantun/suucilha/blob/main/requerimientos.md)
 - 📄[Diagrama de casos de uso](https://github.com/WilberthKantun/suucilha/assets/91703671/98d27afc-60ef-4d72-a179-c17287ad3d73)
 - 📄[Diagrama de arquitectura del sistema](https://github.com/WilberthKantun/suucilha/assets/91703671/ccd5241b-74fb-4406-8454-2667ccf69c60)

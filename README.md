@@ -2,14 +2,13 @@
 
 ## 🌟 Colaboradores
 ###👨‍💻 Wilberth Jesús Kantún Lizama
-  - [GitHub](https://github.com/WilberthKantun) 
-  - [LinkedIn](https://www.linkedin.com/in/wilberth-kant%C3%BAn-7a4470240/) 
+  [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/WilberthKantun)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wilberth-kant%C3%BAn-7a4470240/)
 ###👨‍💻 Wilder Manuel Turriza Poot 
-  - [GitHub](https://github.com/WilderTurriza)
-  - [LinkedIn](https://www.linkedin.com/in/wilder-turriza/)
- 
   [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/WilderTurriza)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wilder-turriza/)
+ 
+
 
 ## 🎯 Objetivo del Proyecto
 El objetivo del proyecto es desarrollar un sistema de reservas en línea para el hotel Suucilha, que permita a los usuarios y al personal del hotel gestionar de manera eficiente y conveniente las reservas de habitaciones. Este sistema busca mejorar la experiencia de los clientes al ofrecer una plataforma intuitiva y segura para realizar reservas en el hotel. Además, proporciona herramientas para que el personal administrativo pueda manejar las reservaciones, gestionar las habitaciones y mantener actualizada la información visual del hotel, optimizando así la operación y administración del establecimiento.

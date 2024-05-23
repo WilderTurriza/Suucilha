@@ -1,10 +1,10 @@
 # 🏨 Suucilha Hotel
 
 ## 🌟 Colaboradores
-###👨‍💻 Wilberth Jesús Kantún Lizama
+### 👨‍💻Wilberth Jesús Kantún Lizama
   [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/WilberthKantun)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wilberth-kant%C3%BAn-7a4470240/)
-###👨‍💻 Wilder Manuel Turriza Poot 
+### 👨‍💻Wilder Manuel Turriza Poot 
   [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/WilderTurriza)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wilder-turriza/)
  

@@ -14,7 +14,7 @@ El objetivo del proyecto es desarrollar un sistema de reservas en línea para el
 ## 📝 Descripción del Proyecto
 El proyecto en desarrollo es un sistema de reservas en línea para el hotel Suucilha. El sistema permitirá a los usuarios:
 
-- 📅 Crear una cuenta, iniciar sesión, actualizar sus datos personales y recuperar su contraseña en caso de olvido.
+- ✍️ Crear una cuenta, iniciar sesión, actualizar sus datos personales y recuperar su contraseña en caso de olvido.
 - 🏨 La página principal mostrará información general del hotel, como imágenes, servicios, contacto, redes sociales y ubicación mediante Google Maps.
 - 🛏️ Ver las habitaciones disponibles, aplicar filtros de búsqueda (cantidad de personas, costo y fecha disponible) y realizar reservaciones.
 - 💳 Completar una reservación mediante pago a través de la integración con PayPal.
